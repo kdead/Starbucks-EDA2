@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 
 #Load the data
-data = pd.read_csv("C:/Users/deadw/OneDrive/Coding Temple Assignments/Streamlit/Starbucks-EDA2/data/cleaned_starbucks.csv")
+data = pd.read_csv("Starbucks-EDA2\data\cleaned_starbucks.csv")
 # Add Nav Bar
 col1, col2 = st.columns([3, 1])
 with col2:
