@@ -21,15 +21,16 @@ if page == "Home":
     # Add image
      col1, col2, col3 = st.columns([1, 2, 1])
      with col2:
-        st.image("C:/Users/deadw/OneDrive/Coding Temple Assignments/Streamlit/Starbucks-EDA/starbucks-caramel-frappuccino-starbucks-cup-frappuccino-11562887510r3t2fh4oho.png",use_container_width=True)
-    # Add description and greeting
+      image_path = "starbucks-caramel-frappuccino-starbucks-cup-frappuccino-11562887510r3t2fh4oho.png"
+      st.image(image_path)
+       # Add description and greeting
      st.markdown("<span style= 'font-size: 24px; '> Welcome to the Starbucks EDA app! Take a moment to explore!!</span>", unsafe_allow_html=True)
 
     # Overview
      st.subheader("Overview of the Dataset")
      st.write(f"The shape of the data is: {data.shape}")
      st.write(data.describe())
-     container = st.container(border=True)
+     container = st.container()
      container.write("These are key statistics from the dataset. This information gives a quick summary of the nutrition metrics associated with Starbucks beverages.")
 
      st.markdown("<h2 style='font-size: 16px;'><strong>Initial Glimpse of the Data:</strong></h2>",
@@ -37,7 +38,7 @@ if page == "Home":
      st.write(data.head())
 
     # Add a container
-     container = st.container(border=True)
+     container = st.container()
      container.write("The data gives the nutritional facts for some of Starbuck's most popular menu items.")
 
 # Page 2
@@ -63,7 +64,7 @@ elif page == "Page 2":
       ax.set_ylabel('Beverage Category', fontsize=16, fontweight='bold')
       st.pyplot(fig)
     
-      container = st.container(border=True)
+      container = st.container()
       container.write("There is a total of 240 drinks included in our dataset")
     
       st.markdown("<br>", unsafe_allow_html=True)
@@ -77,7 +78,7 @@ elif page == "Page 2":
       plt.ylabel('Frequency',  fontsize=12, fontweight='bold')
       st.pyplot(fig)
 
-      container = st.container(border=True)
+      container = st.container()
       container.write("Most drinks on the Starbucks ☕ menu have about 200 calories.")
 
 # Heatmap
@@ -91,7 +92,7 @@ elif page == "Page 2":
       plt.title("Correlation Heatmap", fontsize=20, fontweight='bold')
       st.pyplot(plt)
 
-      container = st.container(border=True)
+      container = st.container()
       container.write("Here, we see that higher fat 🧈, sodium, and sugar 🧁 tends to correlate with higher calories.")
 
 # Average Nutrition
@@ -108,7 +109,7 @@ elif page == "Page 2":
       plt.tight_layout()
       st.pyplot(plt)
       
-      container = st.container(border=True)
+      container = st.container()
       container.write("Frappuccino Blended Coffees have the highest average of Total Fat, Sugar, and Calories.")
 
 # Caffeine
@@ -121,7 +122,7 @@ elif page == "Page 2":
       plt.ylabel('Caffeine (mg)', fontsize=14, fontweight='bold')
       st.pyplot(plt)
 
-      container = st.container(border=True)
+      container = st.container()
       container.write("Coffee has the highest caffeine content, followed by Classic Expresso drinks.")
 
  # Health Ratings
